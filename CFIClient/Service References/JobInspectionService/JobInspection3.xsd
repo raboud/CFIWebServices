@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:7648/JobInspection.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:7648/JobInspection.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CFI" />
+  <xs:element name="DownloadFileEnd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileEndResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadFileEndResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogDirectoryNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogDirectoryNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetLogDirectoryNamesResult" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLogDirectoryName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLogDirectoryNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCurrentLogDirectoryNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogFileNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="logDirectoryName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogFileNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetLogFileNamesResult" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueLogFileDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="directoryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueLogFileDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueueLogFileDownloadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Echo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnThis" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EchoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EchoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduledOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxOrders" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOrderIDsResult" nillable="true" type="q3:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByCustomerLastName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduledOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxOrders" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByCustomerLastNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOrderIDsByCustomerLastNameResult" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="range" nillable="true" type="q5:DateRange" />
+        <xs:element minOccurs="0" name="scheduledOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxOrders" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOrderIDsByDateRangeResult" nillable="true" type="q6:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByStoreNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="storeNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduledOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxOrders" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByStoreNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOrderIDsByStoreNumberResult" nillable="true" type="q7:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByMultipleCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="poNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="storeNumber" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="range" nillable="true" type="q8:DateRange" />
+        <xs:element minOccurs="0" name="scheduledOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxOrders" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderIDsByMultipleCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOrderIDsByMultipleCriteriaResult" nillable="true" type="q9:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersByPONumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="poNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduledOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxOrders" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersByPONumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOrdersByPONumberResult" nillable="true" type="q10:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="GetOrderByIDResult" nillable="true" type="q11:OrderInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllNoteTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllNoteTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllNoteTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderID" type="xs:int" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="note" nillable="true" type="q12:NoteInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNoteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noteID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="GetNoteResult" nillable="true" type="q13:NoteInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNotesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNoteText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noteID" type="xs:int" />
+        <xs:element minOccurs="0" name="newText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNoteTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNoteTextResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noteID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteNoteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllUsersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderID" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="photo" nillable="true" type="q14:PhotoInfo" />
+        <xs:element minOccurs="0" name="fileExtension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uploadedFileClaimToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPhotoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueuePhotoDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueuePhotoDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueuePhotoDownloadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="photoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/CFI" minOccurs="0" name="GetPhotoResult" nillable="true" type="q15:PhotoInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhotos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhotosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPhotosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="photoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletePhotoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueDiagramDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="diagramNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueDiagramDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueueDiagramDownloadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileStart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="totalBytes" type="xs:int" />
+        <xs:element minOccurs="0" name="chunkSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileStartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UploadFileStartResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFilePart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chunkIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="bytes" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFilePartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UploadFilePartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UploadFileCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileEnd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileEndResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UploadFileEndResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileStart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chunkSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileStartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadFileStartResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFilePart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chunkIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFilePartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadFilePartResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadFileCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

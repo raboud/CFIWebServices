@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="749b969a-c951-45ee-a003-f57a81433339" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7648/JobInspection.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JobInspection.xsd" MetadataType="Schema" ID="4522c91d-45fa-4bea-89f8-90080a5c4ea6" SourceId="1" SourceUrl="http://localhost:7648/JobInspection.svc?xsd=xsd3" />
+    <MetadataFile FileName="JobInspection1.xsd" MetadataType="Schema" ID="a89d4f8a-cc9c-4ea5-825f-5ec902101f7b" SourceId="1" SourceUrl="http://localhost:7648/JobInspection.svc?xsd=xsd1" />
+    <MetadataFile FileName="JobInspectionService.wsdl" MetadataType="Wsdl" ID="94cd6937-5448-450b-a443-2f2fc9a2d8ba" SourceId="1" SourceUrl="http://localhost:7648/JobInspection.svc?wsdl" />
+    <MetadataFile FileName="JobInspection.disco" MetadataType="Disco" ID="f1c65907-3d54-4df1-95f0-7ffd3f1c6369" SourceId="1" SourceUrl="http://localhost:7648/JobInspection.svc?disco" />
+    <MetadataFile FileName="JobInspection2.xsd" MetadataType="Schema" ID="60fc3e8b-8e26-4990-920f-e4dda8c11278" SourceId="1" SourceUrl="http://localhost:7648/JobInspection.svc?xsd=xsd2" />
+    <MetadataFile FileName="JobInspection3.xsd" MetadataType="Schema" ID="274932a5-16c0-43b4-a408-00fc4db9539f" SourceId="1" SourceUrl="http://localhost:7648/JobInspection.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

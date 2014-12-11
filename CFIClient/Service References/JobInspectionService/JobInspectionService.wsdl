@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JobInspectionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7648/JobInspection.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7648/JobInspection.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7648/JobInspection.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:7648/JobInspection.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CFI" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJobInspection_DownloadFileEnd_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileEnd" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFileEnd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileEndResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetLogDirectoryNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogDirectoryNames" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetLogDirectoryNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogDirectoryNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetCurrentLogDirectoryName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentLogDirectoryName" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetCurrentLogDirectoryName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentLogDirectoryNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetLogFileNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogFileNames" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetLogFileNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogFileNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_QueueLogFileDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueLogFileDownload" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_QueueLogFileDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueLogFileDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_Echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Echo" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_Echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDs" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByCustomerLastName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByCustomerLastName" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByCustomerLastName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByCustomerLastNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByStoreNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByStoreNumber" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByStoreNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByStoreNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByMultipleCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByMultipleCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderIDsByMultipleCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderIDsByMultipleCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrdersByPONumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByPONumber" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrdersByPONumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByPONumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderByID" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetOrderByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetAllNoteTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNoteTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetAllNoteTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNoteTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_AddNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNote" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_AddNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNote" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotes" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UpdateNoteText_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNoteText" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UpdateNoteText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNoteTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DeleteNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNote" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DeleteNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_AddPhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPhoto" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_AddPhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_QueuePhotoDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueuePhotoDownload" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_QueuePhotoDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueuePhotoDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetPhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhoto" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetPhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetPhotos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotos" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_GetPhotos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DeletePhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhoto" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DeletePhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_QueueDiagramDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueDiagramDownload" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_QueueDiagramDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueDiagramDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFileStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileStart" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFileStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFilePart_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFilePart" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFilePart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFilePartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFileCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileCancel" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFileCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFileEnd_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileEnd" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_UploadFileEnd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileEndResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFileStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileStart" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFileStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFilePart_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFilePart" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFilePart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFilePartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFileCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileCancel" />
+  </wsdl:message>
+  <wsdl:message name="IJobInspection_DownloadFileCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileCancelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJobInspection">
+    <wsdl:operation name="DownloadFileEnd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/DownloadFileEnd" message="tns:IJobInspection_DownloadFileEnd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/DownloadFileEndResponse" message="tns:IJobInspection_DownloadFileEnd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogDirectoryNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetLogDirectoryNames" message="tns:IJobInspection_GetLogDirectoryNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetLogDirectoryNamesResponse" message="tns:IJobInspection_GetLogDirectoryNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentLogDirectoryName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetCurrentLogDirectoryName" message="tns:IJobInspection_GetCurrentLogDirectoryName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetCurrentLogDirectoryNameResponse" message="tns:IJobInspection_GetCurrentLogDirectoryName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogFileNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetLogFileNames" message="tns:IJobInspection_GetLogFileNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetLogFileNamesResponse" message="tns:IJobInspection_GetLogFileNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueLogFileDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/QueueLogFileDownload" message="tns:IJobInspection_QueueLogFileDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/QueueLogFileDownloadResponse" message="tns:IJobInspection_QueueLogFileDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/Echo" message="tns:IJobInspection_Echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/EchoResponse" message="tns:IJobInspection_Echo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDs" message="tns:IJobInspection_GetOrderIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsResponse" message="tns:IJobInspection_GetOrderIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByCustomerLastName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByCustomerLastName" message="tns:IJobInspection_GetOrderIDsByCustomerLastName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByCustomerLastNameResponse" message="tns:IJobInspection_GetOrderIDsByCustomerLastName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByDateRange" message="tns:IJobInspection_GetOrderIDsByDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByDateRangeResponse" message="tns:IJobInspection_GetOrderIDsByDateRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByStoreNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByStoreNumber" message="tns:IJobInspection_GetOrderIDsByStoreNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByStoreNumberResponse" message="tns:IJobInspection_GetOrderIDsByStoreNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByMultipleCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByMultipleCriteria" message="tns:IJobInspection_GetOrderIDsByMultipleCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrderIDsByMultipleCriteriaResponse" message="tns:IJobInspection_GetOrderIDsByMultipleCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByPONumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrdersByPONumber" message="tns:IJobInspection_GetOrdersByPONumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrdersByPONumberResponse" message="tns:IJobInspection_GetOrdersByPONumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetOrderByID" message="tns:IJobInspection_GetOrderByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetOrderByIDResponse" message="tns:IJobInspection_GetOrderByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNoteTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetAllNoteTypes" message="tns:IJobInspection_GetAllNoteTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetAllNoteTypesResponse" message="tns:IJobInspection_GetAllNoteTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/AddNote" message="tns:IJobInspection_AddNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/AddNoteResponse" message="tns:IJobInspection_AddNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetNote" message="tns:IJobInspection_GetNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetNoteResponse" message="tns:IJobInspection_GetNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetNotes" message="tns:IJobInspection_GetNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetNotesResponse" message="tns:IJobInspection_GetNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNoteText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/UpdateNoteText" message="tns:IJobInspection_UpdateNoteText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/UpdateNoteTextResponse" message="tns:IJobInspection_UpdateNoteText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/DeleteNote" message="tns:IJobInspection_DeleteNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/DeleteNoteResponse" message="tns:IJobInspection_DeleteNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetAllUsers" message="tns:IJobInspection_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetAllUsersResponse" message="tns:IJobInspection_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/AddPhoto" message="tns:IJobInspection_AddPhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/AddPhotoResponse" message="tns:IJobInspection_AddPhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueuePhotoDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/QueuePhotoDownload" message="tns:IJobInspection_QueuePhotoDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/QueuePhotoDownloadResponse" message="tns:IJobInspection_QueuePhotoDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetPhoto" message="tns:IJobInspection_GetPhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetPhotoResponse" message="tns:IJobInspection_GetPhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/GetPhotos" message="tns:IJobInspection_GetPhotos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/GetPhotosResponse" message="tns:IJobInspection_GetPhotos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/DeletePhoto" message="tns:IJobInspection_DeletePhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/DeletePhotoResponse" message="tns:IJobInspection_DeletePhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueDiagramDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/QueueDiagramDownload" message="tns:IJobInspection_QueueDiagramDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/QueueDiagramDownloadResponse" message="tns:IJobInspection_QueueDiagramDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/UploadFileStart" message="tns:IJobInspection_UploadFileStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/UploadFileStartResponse" message="tns:IJobInspection_UploadFileStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFilePart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/UploadFilePart" message="tns:IJobInspection_UploadFilePart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/UploadFilePartResponse" message="tns:IJobInspection_UploadFilePart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/UploadFileCancel" message="tns:IJobInspection_UploadFileCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/UploadFileCancelResponse" message="tns:IJobInspection_UploadFileCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileEnd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/UploadFileEnd" message="tns:IJobInspection_UploadFileEnd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/UploadFileEndResponse" message="tns:IJobInspection_UploadFileEnd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/DownloadFileStart" message="tns:IJobInspection_DownloadFileStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/DownloadFileStartResponse" message="tns:IJobInspection_DownloadFileStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFilePart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/DownloadFilePart" message="tns:IJobInspection_DownloadFilePart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/DownloadFilePartResponse" message="tns:IJobInspection_DownloadFilePart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJobInspection/DownloadFileCancel" message="tns:IJobInspection_DownloadFileCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJobInspection/DownloadFileCancelResponse" message="tns:IJobInspection_DownloadFileCancel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJobInspection" type="tns:IJobInspection">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DownloadFileEnd">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/DownloadFileEnd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogDirectoryNames">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetLogDirectoryNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentLogDirectoryName">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetCurrentLogDirectoryName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogFileNames">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetLogFileNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueLogFileDownload">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/QueueLogFileDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/Echo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDs">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrderIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByCustomerLastName">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrderIDsByCustomerLastName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByDateRange">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrderIDsByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByStoreNumber">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrderIDsByStoreNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderIDsByMultipleCriteria">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrderIDsByMultipleCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByPONumber">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrdersByPONumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetOrderByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNoteTypes">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetAllNoteTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/AddNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNote">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotes">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNoteText">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/UpdateNoteText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNote">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/DeleteNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPhoto">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/AddPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueuePhotoDownload">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/QueuePhotoDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/GetPhotos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhoto">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/DeletePhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueDiagramDownload">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/QueueDiagramDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileStart">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/UploadFileStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFilePart">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/UploadFilePart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileCancel">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/UploadFileCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileEnd">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/UploadFileEnd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileStart">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/DownloadFileStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFilePart">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/DownloadFilePart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileCancel">
+      <soap:operation soapAction="http://tempuri.org/IJobInspection/DownloadFileCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JobInspectionService">
+    <wsdl:port name="BasicHttpBinding_IJobInspection" binding="tns:BasicHttpBinding_IJobInspection">
+      <soap:address location="http://localhost:7648/JobInspection.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

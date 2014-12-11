@@ -1,0 +1,23 @@
+﻿<log4net debug="false">
+  
+  <!-- Define some appenders -->
+
+  <!-- Setup root category, add appenders and set default priority -->
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="Application" />
+  </root>
+
+  <appender name="WebServiceLog" type="log4net.Appender.FileAppender">
+    <file value="WebService.log" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level - %message%newline%newline" />
+    </layout>
+  </appender>
+  <logger name="WebServiceLog" additivity="false">
+    <appender-ref ref="WebServiceLog" />
+  </logger>
+
+
+</log4net>

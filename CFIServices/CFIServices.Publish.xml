@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://fusion-pc-10" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="CFI/CFIServices" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="False" profileName="CFI" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="taj\steve.millar" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkLJ/i2eSrU2VjMETGUwj0QAAAAACAAAAAAADZgAAwAAAABAAAABA2vJuDLKDBoXNDJ2fOYr/AAAAAASAAACgAAAAEAAAACvRXBmzs8RMWgcTRzqKV/oYAAAAUQev31w6ZJ5eq8w6A9bd5VXwDcHAhJg1FAAAAIXgOGCTHnsPrRzineFZnLXfSklp" SelectedForPublish="True" />
+  <publishProfile publishUrl="C:\Users\dbartram\Dropbox\CFI Web Service" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="CFI/CFIServices" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="CFI Web Service Dropbox" publishMethod="FileSystem" replaceMatchingFiles="True" userName="flooring\administrator" savePWD="False" userPWD="" SelectedForPublish="False">
+    <file relUrl="bin/CFISharedTypes.pdb" publishTime="07/10/2011 16:02:39" />
+    <file relUrl="bin/log4net.dll" publishTime="11/14/2010 11:21:16" />
+    <file relUrl="JobInspection.svc" publishTime="05/19/2011 12:39:44" />
+    <file relUrl="bin/Utilities.pdb" publishTime="07/10/2011 16:02:39" />
+    <file relUrl="Web.config" publishTime="07/10/2011 16:30:47" />
+    <file relUrl="bin/CFIServices.dll" publishTime="07/10/2011 16:30:47" />
+    <file relUrl="bin/CFIDataAccess.pdb" publishTime="07/10/2011 16:17:00" />
+    <file relUrl="bin/CFIServices.pdb" publishTime="07/10/2011 16:30:47" />
+    <file relUrl="bin/CFIDataAccess.dll" publishTime="07/10/2011 16:17:00" />
+    <file relUrl="bin/CFISharedTypes.dll" publishTime="07/10/2011 16:02:39" />
+    <file relUrl="bin/Utilities.dll" publishTime="07/10/2011 16:02:39" />
+  </publishProfile>
+</publishData>
